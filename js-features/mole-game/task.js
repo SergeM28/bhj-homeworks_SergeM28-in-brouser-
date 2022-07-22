@@ -1,8 +1,8 @@
 let hit = 0;
 let miss = 0;
 
-for (let i = 0; i < 10; i++) {
-    let targetHole = document.getElementById("hole" + 1);
+for (let i = 1; i < 10; i++) {
+    let targetHole = document.getElementById("hole" + i);
     targetHole.onclick = () => {
         if (targetHole.className.includes("hole hole_has-mole")) {
             hit += 1;
