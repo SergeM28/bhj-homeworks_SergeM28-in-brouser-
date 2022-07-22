@@ -68,6 +68,13 @@ class Autocomplete {
   }
 
   getMatches( text ) {
+    const contactsListArr = [];
+    for (let option of this.input.options) {
+      if (option.innerText.includes(text)) {
+        contactsListArr.push({text: option.innerText, value: option.value});
+      }
+    }
+    return contactsListArr;
     /*
       TODO: этот метод нужно дописать
       text - фраза, которую вводят в поле поиска
