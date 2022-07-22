@@ -14,7 +14,10 @@ function sizeChanges() {
     img = 0;
    image.width -= 100;
   }
-  document.getElementById("clicker__counter").textContent = counter + "\n" + "Скорость клика: " + ((clickTimer - timer) / 1000) + " сек.";
+
+  const diff = clickTimer - timer;
+  clickSpeed = 1000 / diff;
+  document.getElementById("clicker__counter").textContent = counter + "\n" + "Скорость клика: " + clickSpeed.toFixed(2);
   timer = Date.now();
 }
 image.onclick = sizeChanges;
