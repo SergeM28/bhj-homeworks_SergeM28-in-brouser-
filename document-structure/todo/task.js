@@ -9,7 +9,7 @@ btn.addEventListener("click", e => {
 });
 
 function addTask(value) {
-    if (value) {
+    if (value.trim()) {    
         let task = document.createElement("div");
         task.classList.add("task");
         task.innerHTML += `<div class="task__title">${value}</div>
