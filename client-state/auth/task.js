@@ -42,3 +42,10 @@ document.getElementById("signout__btn").onclick = function(e) {
   localStorage.removeItem("authString");
 };
 
+function returnPage() {
+  if (localStorage["authString"]) {
+      formsChange(JSON.parse(localStorage["authString"])["user_id"]);
+      clearForm();
+  };
+};
+returnPage();
